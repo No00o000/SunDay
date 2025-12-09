@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunday.news.com</title>
+    <link rel="stylesheet" href="assets/css/video.css">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+</head>
+
+<body>
+
+    <body class="home">
+        <header>
+            <div class="nav">
+                <div class="logo">
+                    <h2>Sunday</h2>
+                    <i class="fas fa-sun" style="font-size: 32px; color: orange;"></i>
+                </div>
+                <div class="search">
+                    <a href="search.html" class="search-icon-only">
+                        <i class="fas fa-search"></i>
+                    </a>
+
+                    <input type="text" class="search-input" placeholder="Tìm kiếm...">
+                    <button class="search-button"><i class="fas fa-search"></i></button>
+                </div>
+
+                <div class="menu" id="mobileMenu">
+                    <ul>
+                        <li><a href="index.html">Trang Chủ</a></li>
+                        <li><a href="thoisu.html">Đăng Bài</a></li>
+                        <li><a href="thethao.html">Thể Thao</a></li>
+                        <li><a href="video.html">Video</a></li>
+                        <li><a href="chude.html">Chủ Đề</a></li>
+                        <li><a href="thongtin.html">Thông Tin</a></li>
+                        <li class="dnmobile"><a href="dangnhap.html">Đăng Nhập</a></li>
+                    </ul>
+                </div>
+                <div class="icon-menu">
+                    <a href="dangnhap.html"><i class="fas fa-user"></i></a>
+                </div>
+                <div class="hamburger" onclick="toggleMenu()">
+                    <i class="fas fa-bars"></i>
+                </div>
+
+            </div>
+        </header>
+
+        <!-- VIDEO CHÍNH -->
+        <main class="vd-container">
+
+            <section class="vd-left">
+                <img src="assets/img/News-1.jpg">
+                <h2 class="vd-left-title">Tin tức nóng nhất – cập nhật nhanh, chính xác</h2>
+            </section>
+
+            <!-- VIDEO PHỤ -->
+            <aside class="vd-right">
+
+
+                <div class="vd-right-item">
+                    <img src="assets/img/dl2.jpg">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta fugiat magni cum! Consectetur
+                        itaque </p>
+                </div>
+
+
+                <div class="vd-right-item">
+                    <img src="assets/img/dl2.jpg">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta fugiat magni cum! Consectetur
+                        itaque </p>
+                </div>
+
+
+                <div class="vd-right-item">
+                    <img src="assets/img/dl2.jpg">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta fugiat magni cum! Consectetur
+                        itaque </p>
+                </div>
+                <div class="vd-right-item">
+                    <img src="assets/img/dl2.jpg">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta fugiat magni cum! Consectetur
+                        itaque </p>
+                </div>
+            </aside>
+
+        </main>
+
+        <!-- GRID VIDEO -->
+        <section class="vd-grid">
+            <div class="vd-grid-list">
+
+                <div class="vd-grid-item">
+                    <img src="assets/img/dl1.jpg">
+                    <p>Tin tức Việt Nam mới nhất hôm nay</p>
+                </div>
+
+                <div class="vd-grid-item">
+                    <img src="assets/img/dl3.jpg">
+                    <p>Phóng sự mới nhất về bão miền Trung</p>
+                </div>
+
+                <div class="vd-grid-item">
+                    <img src="assets/img/dl4.jpg">
+                    <p>Phỏng vấn độc quyền cầu thủ Việt Nam</p>
+                </div>
+                <div class="vd-grid-item">
+                    <img src="assets/img/dl1.jpg">
+                    <p>Tin tức Việt Nam mới nhất hôm nay</p>
+                </div>
+
+
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="vd-footer">
+
+            <div class="vd-footer-grid">
+
+                <div class="vd-footer-left">
+                    <h2>Sunday</h2>
+                    <p>Tạp chí điện tử Tri Thức</p>
+                    <p>Cơ quan chủ quản: SMH Studio</p>
+                    <p>Giấy phép báo chí số: xxx/GP-BTTTT</p>
+                    <p>Tổng biên tập: Nguyễn Đan Huy</p>
+                    <br>
+                    <div class="vd-footer-icons">
+                        <i class="fab fa-facebook-f"></i>
+                        <i class="fab fa-tiktok"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-youtube"></i>
+                        <i class="fab fa-linkedin"></i>
+                    </div>
+                </div>
+
+                <div class="vd-footer-right">
+                    <p>Hỗ trợ</p>
+                    <ul>
+                        <li><a href="#">Trung tâm hỗ trợ</a></li>
+                        <li><a href="#">Nhóm thiết kế</a></li>
+                        <li><a href="#">Chính sách bảo mật</a></li>
+                        <li><a href="#">Điều khoản</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </footer>
+
+            <script>
+        const slider = document.querySelector('.card-books ul');
+        const nextBtn = document.querySelector('.next-btn');
+        const prevBtn = document.querySelector('.prev-btn');
+        const items = document.querySelectorAll('.card-books ul li');
+        const itemWidth = 240; // width + gap
+        let currentIndex = 0;
+
+        function updateSlider() {
+            const maxIndex = items.length - 1;
+            const offset = currentIndex * itemWidth;
+            slider.style.transform = `translateX(-${offset}px)`;
+        }
+
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % items.length; // quay vòng
+            updateSlider();
+        });
+
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + items.length) % items.length; // quay vòng ngược
+            updateSlider();
+        });
+
+        function toggleMenu() {
+            const menu = document.getElementById("mobileMenu");
+            menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
+        }
+
+
+    </script>
+
+    </body>
+
+</html>
